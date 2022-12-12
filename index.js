@@ -3,7 +3,7 @@ const cors = require("cors");
 const { MerkleTree } = require("merkletreejs");
 const keccak256 = require("keccak256");
 const { whiteListedAddresses } = require("./addresses.js");
-const PORT = 3001;
+const PORT = process.env.PORT || 3030;
 const app = express(),
   DEFAULT_PORT = 3001;
 app.use(cors());
