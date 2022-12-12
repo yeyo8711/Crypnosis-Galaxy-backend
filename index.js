@@ -5,7 +5,7 @@ const keccak256 = require("keccak256");
 const { whiteListedAddresses } = require("./addresses.js");
 const PORT = process.env.PORT || 3030;
 const app = express(),
-  DEFAULT_PORT = 3001;
+  DEFAULT_PORT = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
