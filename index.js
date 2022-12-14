@@ -18,10 +18,9 @@ app.get("/", (req, res) => {
   const leaf = keccak256(req.query.wallet);
   const proof = tree.getProof(leaf).map((x) => buf2hex(x.data));
   res.send(proof);
-  console.log(req.query);
 });
 
 app.listen(PORT, function () {
   console.log("Listening On Port ", PORT);
 });
-// root 0xccc0a1d245b24678406a3324de49f52157757c92af52a3ac8e0d6984bd2512ce
+// root 0x5d1c03b612f1b8707484e0c0690bc94ec7e6e9777dddada044ff4870476f412d
